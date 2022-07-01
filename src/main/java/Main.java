@@ -42,14 +42,11 @@ public class Main {
         while (repeat) {
             log(welcomeMenu);
             int hostAnswer = sc.nextInt();
-
+            sc.nextLine();
             switch (hostAnswer) {
                 case 1:
                     log(checkInQ);
-                    String nameIn = sc.nextLine();
-                    Person guest = new Person("");
-                    guest.setName(nameIn);
-                    String str = sc.nextLine();
+                    String guest = sc.nextLine();
                     Restaurant.checkIn(guest);
                     break;
                 case 2:
