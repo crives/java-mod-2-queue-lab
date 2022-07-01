@@ -28,6 +28,7 @@ public class Main {
     public static String welcomeMenu = "\nWould you like to: \n1. Check someone in for dining with us \n2. Check someone out \n3. View all tables \n4. Exit \n \n(Enter below the number corresponding to your choice.)";
     public static String checkInQ = "What is the name of the person you'd like to check in?";
     public static String checkOutQ = "What is the name of the person you would like to check out?";
+    public static Restaurant restaurant = new Restaurant();
 
     public static void main(String[] args) {
         log("\n~*~*~*~ \nWelcome to the Virtual Restaurant! \n~*~*~*");
@@ -47,16 +48,16 @@ public class Main {
                 case 1:
                     log(checkInQ);
                     String guest = sc.nextLine();
-                    Restaurant.checkIn(guest);
+                    restaurant.checkIn(guest);
                     break;
                 case 2:
                     log(checkOutQ);
                     String nameOut = sc.nextLine();
-                    Restaurant.checkOut(nameOut);
+                    restaurant.checkOut(nameOut);
                     host();
                     break;
                 case 3:
-                    Restaurant.viewTables();
+                    restaurant.viewTables();
                     host();
                     break;
                 case 4:

@@ -1,5 +1,6 @@
 public class Table {
-    int tableNum;
+    // Private for table class to have complete control over table number
+    private int tableNum;
 
     public Table(int tableNum) {
         this.tableNum = tableNum;

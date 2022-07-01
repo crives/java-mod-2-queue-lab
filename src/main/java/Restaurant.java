@@ -5,14 +5,14 @@ import java.util.Map;
 
 public class Restaurant {
     // List for Reservations / Tables (Add Person to table)
-    public static Map<Table, String> tables = new HashMap<Table, String>();
-    public static Table table1 = new Table(1);
-    public static Table table2 = new Table(2);
+    public Map<Table, String> tables = new HashMap<Table, String>();
+    public Table table1 = new Table(1);
+    public Table table2 = new Table(2);
     
     // Queue for Waitlist
-    public static Queue<String> waitList = new LinkedList<String>();
+    public Queue<String> waitList = new LinkedList<String>();
     
-    public static void checkIn(String guest) {
+    public void checkIn(String guest) {
         if(tables.isEmpty()) {
             createTables();
         }
@@ -32,7 +32,7 @@ public class Restaurant {
         }
     }
 
-    public static void checkOut(String name) {
+    public void checkOut(String name) {
         if(tables.get(table1).equals(name)) {
             tables.replace(table1, "");
             Main.log("We've got them checked out!");
@@ -54,13 +54,13 @@ public class Restaurant {
         }
     }
 
-    public static void createTables() {
+    public void createTables() {
         tables.clear();
         tables.put(table2, "");
         tables.put(table1, "");
     }
 
-    public static void viewTables() {
+    public void viewTables() {
         if(tables.isEmpty()) {
             createTables();
         }
