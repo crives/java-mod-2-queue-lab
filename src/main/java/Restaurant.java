@@ -13,10 +13,6 @@ public class Restaurant {
     public static Queue<String> waitList = new LinkedList<String>();
     
     public static void checkIn(String guest) {
-        // Prior to this, create a new person
-        // for loop to see if tables contains nobody, then 
-        // replace that table with new guest
-        // for (Person person: tables.values()) {
         if(tables.isEmpty()) {
             createTables();
         }
